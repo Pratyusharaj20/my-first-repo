@@ -1,112 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <title>Job Application Form</title>
- <style>
- body {
- font-family: Arial, sans-serif;
- margin: 30px;
- background-color: #f9f9f9;
- }
- h1 {
- text-align: center;
- color: #333;
- }
- p {
- text-align: center;
- max-width: 600px;
- margin: 0 auto 30px;
- color: #555;
- }
- form {
- max-width: 600px;
- margin: auto;
- background: #fff;
- padding: 20px;
- border-radius: 8px;
- box-shadow: 0 0 10px rgba(0,0,0,0.1);
- }
- label {
- display: block;
- margin-top: 15px;
- font-weight: bold;
- }
- input, select, textarea {
- width: 100%;
- padding: 10px;
- margin-top: 5px;
- border-radius: 4px;
- border: 1px solid #ccc;
- box-sizing: border-box;
- }
-.checkbox-group {
- display: flex;
- flex-wrap: wrap;
- gap: 10px;
- margin-top: 5px;
- }
- .checkbox-group label {
- font-weight: normal;
- }
- button {
- margin-top: 20px;
- background-color: #007BFF;
- color: white;
- padding: 12px;
- border: none;
- border-radius: 4px;
- cursor: pointer;
- font-size: 16px;
- }
- button:hover {
- background-color: #0056b3;
- }
- .link {
- text-align: center;
- margin-top: 20px;
- }
- .link a {
- color: #007BFF;
- text-decoration: none;
- }
- .link a:hover {
- text-decoration: underline;
- }
- </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Summary Viewer</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
- <h1>Job Application Form</h1>
- <p>Welcome to ECO TECH – a forward-thinking IT company committed to building sustainable and intelligent technology solutions for the future. We’re thrilled that you’re interested in joining our dynamic and eco-conscious team of innovators!</p>
- <form>
- <label for="name">Applicant Name:</label>
- <input type="text" id="name" name="name" required>
- <label for="email">Email ID:</label>
- <input type="email" id="email" name="email" required>
- <label for="role">Preferred Job Role:</label>
- <select id="role" name="role" required>
- <option value="">-- Select Role --</option>
- <option value="backend">Backend Developer</option>
-option value="frontend">Frontend Developer</option>
- <option value="fullstack">Full Stack Developer</option>
- </select>
- <label>Skills:</label>
- <div class="checkbox-group">
- <label><input type="checkbox" name="skills" value="html"> HTML</label>
- <label><input type="checkbox" name="skills" value="java script"> Java Script</label>
- <label><input type="checkbox" name="skills" value="python"> Python</label>
- <label><input type="checkbox" name="skills" value="java"> Java</label>
-<label><input type="checkbox" name="skills" value="css"> CSS</label>
- </div>
- <label>Upload Resume: (Attach your resume)</label>
- <input type="file" name="resume" id="resume">
- <label for="why">Why do you want this job?</label>
- <textarea id="why" name="why" rows="5" placeholder="Write here..." required></textarea>
- <button type="submit">Submit Application</button>
- </form>
- <div class="link">
- <p><a href="https://www.technovasolutions.com" target="_blank">Visit our company 
-page</a></p>
- </div>
+  <div class="container">
+    <h1>📚 Book Summary Viewer</h1>
+    <p>Click on a book to read a quick summary:</p>
+
+    <ul class="book-list">
+      <li onclick="showSummary('book1')">1. Rich Dad Poor Dad</li>
+      <li onclick="showSummary('book2')">2. Amma Diary Lo Koni Pagilu</li>
+      <li onclick="showSummary('book3')">3. Sita: The Warrior of Mithila</li>
+      <li onclick="showSummary('book4')">4. The Old Man and the Sea</li>
+    </ul>
+
+    <div class="summary-box" id="summary">
+      <p>Select a book to see details here.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
